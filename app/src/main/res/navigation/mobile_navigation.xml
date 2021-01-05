@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="sticky.notes.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_AddNoteFragment"
+            app:destination="@id/nav_addNote" />
+
+        <action
+            android:id="@+id/action_HomeFragment_to_EditNoteFragment"
+            app:destination="@id/nav_editNote" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_addNote"
+        android:name="sticky.notes.ui.addnote.AddNoteFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_add_note" />
+
+    <fragment
+        android:id="@+id/nav_editNote"
+        android:name="sticky.notes.ui.editnote.EditNoteFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_edit_note" />
+</navigation>
